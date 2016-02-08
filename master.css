@@ -9,6 +9,7 @@ p{padding-bottom:1em;}
 a{color:#000000;text-decoration:none;border-bottom:1px solid black;}
 a:visited{color:#BBBBBB;border-bottom:1px solid #BBBBBB;}
 a:hover{color:blue;border-color:blue;}
+a:active{color:blue;border-color:blue;}
 
 h2{text-transform: uppercase;color:#000000;font-size:.65em;padding-bottom:1.5em;}
 
