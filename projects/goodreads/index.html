@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf=8">
+    <title>Design Exercise - Brad McNally</title>
+    <style type="text/css">
+        body {
+            background-color: white;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.45;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .writing {
+            margin: 0 auto;
+            max-width: 700px;
+            padding: 36px;
+        }
+
+        iframe {
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            border: none;
+        }
+
+        iframe:focus {
+            outline: none;
+        }
+
+        iframe[seamless] {
+            display: block;
+        }
+
+        #fullbleed {
+            background-color: #F2ECDF;
+            padding: 36px;
+        }
+
+        #container {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 700px;
+            font-size: 1.75em;
+            font-family: "freight-neo-pro", sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.75em;
+            margin: 0;
+            margin-top: 36px;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-weight: 800;
+        }
+
+        h3 {
+            margin: 0;
+            margin-top: 36px;
+            font-family: "freight-neo-pro", sans-serif;
+        }
+
+        em {
+            font-family: "freight-neo-pro", sans-serif;
+        }
+
+        a {
+            color: #FD5F43;
+        }
+
+        a:visited {
+            color: #FD5F43;
+        }
+
+        a:hover {
+            color: #D14D36;
+        }
+
+        .screens {
+            margin: 0 auto;
+            max-width: 700px;
+            padding: 36px;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 36px;
+        }
+
+        #hero {
+            height: 60vh;
+            text-align: center;
+            overflow: hidden;
+        }
+    </style>
+    <script src="https://use.typekit.net/fpx3nbt.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
+</head>
+
+<body>
+    <div id="hero">
+        <h1>Goodreads</h1>
+        <img src="assets/hero.jpg">
+    </div>
+
+    <div id="fullbleed">
+        <div id="container">
+            <span>The Story → There's a reason why, when we visit someone's home, we almost always look at their shelves: the volumes there are an intimate inventory of their experiences.</span>
+        </div>
+    </div>
+    <section class="writing">
+        <h2>Research</h2>
+        <p>I’m a big fan of reading. When I thought about a product to reimagine and redesign, I immediately thought of Goodreads. Goodreads is a social network for people who like to read. Goodreads catalogs 1.5 billion books and has an impressive 55 million
+            members who have left over 50 million reviews. It’s one of my favorite social networks because of it’s content, but it leaves a lot to be desired in form and function.</p>
+        <p>Goodreads has some great goals:</p>
+
+        <ul>
+            <li>See what your freinds are reading</li>
+            <li>Track the books you’ve read, want to read, and are reading now</li>
+            <li>Review, discuss, and share books</li>
+            <li>Get book recommendations</li>
+        </ul>
+
+        <p>I’ve been a member since 2013—While they’ve improved a lot there are a handful problems that I run into regularly.</p>
+
+        <ul>
+            <li>Finding new books is harder than it needs to be. There is little to none editorial/recommending/curating happening.</li>
+            <li>There are so many features that have been tacked on over the years that the entire product feels overwhelming and busy. From my own use I was able to identify features could be downplayed: Trivia, Quizzes, Creative Writing, Giveaways, News
+                and Blog</li>
+            <li>It’s hard to view books by author or genre. Everything should be linkable! Authors, Genres, Publishers, Awards!</li>
+            <li>Shelves and Lists are too similar. Could they be the same if there was an option to have public bookshelves that anyone could contribute to?</li>
+            <li>The friend system is confusing</li>
+            <li>Buying books through the site is overly confusing, there are 14 vendors!</li>
+            <li>There is no way to identify topics within a book. A new topic tagging system would work really well to help you know if there are any triggers in a book you are reading.</li>
+        </ul>
+
+        <p>I started out by dumping all of my preconceived thoughts onto paper. This included a lot of lists, documenting attributes, identifying the main sections of the product (how can I simplify and improve the experience?), a little brainstorming to
+            search for any delight that could be added (Sort your bookshelves based on the color of the cover!) and writing down any open questions I had. </p>
+        <table style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                        <h3>Book Detail</h3>
+                        <ul>
+                            <li>Title</li>
+                            <li>Author</li>
+                            <li>Metadata
+
+                                <ul>
+                                    <li>Description</li>
+                                    <li>pages</li>
+                                    <li>genres</li>
+                                    <li>topics</li>
+                                </ul>
+                                <li>ratings</li>
+                                <li>reviews</li>
+                                <li>where to buy</li>
+                                <li>recommended</li>
+                                <li>discussions</li>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <h3>Member Detail</h3>
+                        <ul>
+                            <li>Name</li>
+                            <li>Bio</li>
+                            <li>Social Links</li>
+                            <li>Metadata
+
+                                <ul>
+                                    <li>Average rating</li>
+                                    <li>books on shelves</li>
+                                    <li>etc</li>
+                                </ul>
+                            </li>
+                            <li>Currently reading</li>
+                            <li>Followers/Following</li>
+                            <li>Activity</li>
+                            <li>Discussion</li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <h3>Author pages</h3>
+                        <ul>
+                            <li>Name</li>
+                            <li>Follow</li>
+                            <li>Bio</li>
+                            <li>Bibliography</li>
+                            <li>metadata</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>My goals in this redesign were:</h3>
+
+        <ul>
+            <li>Reduce the clutter and focus on the books</li>
+            <li>Improve the overall usability and readability</li>
+            <li>Offer a simple collection view that can be filtered and sorted</li>
+            <li>Make the bookshelf concept more visual</li>
+            <li>Show a lot of new and interesting books in the explore section</li>
+            <li>Keep the simple ratings and reviews system.</li>
+            <li>Allow for navigation through to authors and publishers to find even more books!</li>
+        </ul>
+        <h2>Sketches</h2>
+
+        <p>I started sketching out some simple mobile layouts that could be used for a native app or a responsive site. I knew I wanted the main way you interact with your bookshelves to be swiping on mobile.</p>
+
+        <p><em>Initial mobile sketches</em></p>
+    </section>
+    <img src="assets/phonesketches.jpg">
+    <section class="writing">
+        <p>From there I was able to sketch some rough desktop sizes. This included a good amount of the screens I would mockup for the final design.</p>
+        <p><em>Initial desktop size sketches</em></p>
+    </section>
+    <img src="assets/desktopsketches.jpg">
+    <section class="writing">
+        <p>After that I spent a little time focusing on some of the micro interactions across the site. How should filtering and sorting work? How can you add something to your collection? Is it different than adding it to a shelf?</p>
+    </section>
+    <img src="assets/interactionssketch.jpg">
+    <section class="writing">
+        <h2>Wireframes</h2>
+
+        <p>A lot of descisions were made in this phase of the project:</p>
+
+        <ul>
+            <li>Overall app structure, page layout and responsive design system</li>
+            <li>What should go on each page (elements and patterns)</li>
+            <li>I also decided that I would be focusing on the desktop sizes to get the most out of my time.</li>
+        </ul>
+
+        <p>I wanted to work from real data so I took this time to gather enough book titles, authors, and covers to use throuhgout the design. I set up my styles and symbols in sketch so I could quickly apply changes across all of the pages.</p>
+    </section>
+    <img src="assets/wireframes.jpg">
+    <section class="writing">
+        <img src="assets/wireframes/Member@2x.png">
+        <img src="assets/wireframes/book@2x.png">
+        <img src="assets/wireframes/contentfilter@2x.png">
+        <h2>Mockups</h2>
+
+        <p>Time to dig into the details: fonts, sizes, animation, shadow, and colors.</p>
+        <p><em>Fonts: Franklin Gothic URW, Freight Neo Pro</em></p>
+
+        <em>Animation & Depth study: Hover over the book covers below</em></section>
+    <iframe src="http://bradmcnally.com/projects/goodreads/demos/demo.html" width="1000" height="300"></iframe>
+    <section class="screens">
+        <p><em>Iterations</em></p>
+        <img src="assets/iterations@2x.png">
+        <p><em>Final Screen Designs</em></p>
+    </section>
+    <img src="assets/designszoomout.jpg">
+    <section class="writing">
+        <h3>Collection</h3>
+        <p>Here you can see all of your books (paginated) as well as filter them by name, genre, topic, if you’ve reviewed it or not, and if you’ve read it. You can also sort by date added, alphabetical, highest rated, most popular, date published, and sorted
+            by color! When you hover over the book you see the cover lift up and show depth and you can see how many of your friends also have the book in their collection.</p>
+        <img src="assets/Collection@2x.jpg">
+        <img src="assets/Collection_Filtering@2x.jpg">
+        <img src="assets/Collection_sorting@2x.jpg">
+        <h3>Shelves</h3>
+        <p>The top of your shelves view is your “Currently Reading” shelf. Any book that you have set to currently reading will be added here. You can update the progress for each book and the graph will animate to the new position. You’ll also get a “Favorites”
+            default shelf. This will help your friends and followers get a good picture of what you like. You can continue to create as many shelves as you’d like.</p>
+        <img src="assets/shelves@2x.jpg">
+        <h3>Explore</h3>
+        <p>This is where you’ll find the latest books that are trending on Goodreads. You can also find featured books, new releases, and personalized recommendations for you. This is where you’ll be able to access the vast catalog of books through the genre
+            pages and view all of the literary award winners.
+        </p>
+        <img src="assets/explore@2x.jpg">
+        <h3>Activity</h3>
+        <p>The activity feed will keep you up to date on what you’re friends are reading, saving, and sharing. You can comment on and like any post with notifications for each user.
+        </p>
+        <img src="assets/activity@2x.jpg">
+        <h3>Book</h3>
+        <p>The book page has everything you need to know about a book. The rating and all of the reviews as well as detailed information about the release and discussions with other Goodreads members. You can preview and buy the books as well as find more
+            book from that other or more books in the series.
+        </p>
+        <img src="assets/book@2x.jpg">
+        <h3>Author</h3>
+        <p>Find all of the other books your favorite author has written. You can also follow them so their updates show up in your activity feed.
+        </p>
+        <img src="assets/author@2x.jpg">
+        <h3>Member</h3>
+        <p>Your member page is what your followers will see. Your profile page displays all of your stats: books read, ratings, average rating, shelves, followers, and following. Your Currently Reading and Favorites shelfs are at the top to help describe
+            you followed by your recent activity.
+        </p>
+        <img src="assets/member@2x.jpg">
+        <h3>Discussions</h3>
+        <p>This section helps you keep track of all of the discussions you’re having about a book, see new posts and the latest activity.
+        </p>
+        <img src="assets/discussions@2x.jpg">
+        <h3>People</h3>
+        <p>The people section gives you an at a glance list of your friends and how many books they’ve collected. You can easily navigate into their profile.</p>
+        <img src="assets/people@2x.jpg">
+        <h3>Miscellaneous screens</h3>
+        <p>Marketing and search results pages</p>
+        <img src="assets/marketing@2x.jpg">
+        <img src="assets/searchresults@2x.jpg">
+
+    </section>
+    <img src="assets/tada.jpg">
+    <div id="fullbleed">
+        <div id="container">
+            <span>Thank You<br /> <a href="mailto:brad@bradmcnally.com">brad@bradmcnally.com</a>
+      </div>
+</div>
+
+</body>
+
+</html>
