@@ -59,6 +59,16 @@ ul {
     line-height: 1.5em;
 }
 
+em {
+    color:gray;
+    font-weight:200;
+    clear:left;
+    display:block;
+    padding-bottom:1em;
+}
+
+h3{display:inline-block;}
+
 @media only screen and (min-width: 667px) {
     div.col {
         width: 33.33%;
