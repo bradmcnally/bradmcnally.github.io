@@ -67,7 +67,7 @@ em {
     padding-bottom:1em;
 }
 
-h3{display:inline-block;}
+h3{font-size:.55em;}
 
 @media only screen and (min-width: 667px) {
     div.col {
