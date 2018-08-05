@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Postcard</title>
+<style>
+/* entire container, keeps perspective */
+body{
+	background-color:#fff;
+}
+
+.flip-container {
+	perspective: 2000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 1280;
+	height: 800px;
+	margin:100 auto;
+
+	
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	-webkit-box-shadow: 0px 20px 103px 8px rgba(0,0,0,0.4);
+-moz-box-shadow: 0px 20px 103px 8px rgba(0,0,0,0.4);
+box-shadow: 0px 20px 103px 8px rgba(0,0,0,0.4);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<img src="front.jpg" />
+					</div>
+					<div class="back">
+							<img src="back.jpg" />
+					</div>
+				</div>
+			</div>
+</body>
+</html>
